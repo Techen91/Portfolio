@@ -1,0 +1,135 @@
+
+.content {
+  position:relative;
+  display: flex;
+
+}
+
+.content h1 {
+  color: #fff;
+  white-space: nowrap;
+  font-size: 100px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position:absolute;
+  transform: translate(-50%, -50%);
+  margin: 50px 1300px;
+
+}
+
+.content h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h1:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.mainphoto {
+    width: 35%;
+    height: 35%;
+    padding: 10px 100px;
+
+}
+.container {
+    display: block;
+    font-size: larger;
+    font-family: fantasy;
+    font-weight: bold;
+    color: crimson;
+    font-size: 35px;
+    display:inline-flex;
+    padding: 200px 100px;
+  }
+  .container img {
+    margin-right: 50px;
+    border-radius: 70%;
+    opacity: 0.8;
+  }
+
+button {
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: 50px 70px;
+    cursor: pointer;
+    perspective: 30rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+    margin: 0px 200px;
+  }
+  
+  button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+      320deg,
+      rgba(0, 140, 255, 0.678),
+      rgba(128, 0, 128, 0.308)
+    );
+    z-index: 1;
+    transition: background 3s;
+  }
+  
+  button:hover::before {
+    animation: rotate 1s;
+    transition: all 0.5s;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateY(180deg);
+    }
+  
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  body{
+    background-image: url(background.png);
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+
+}
